@@ -12,10 +12,16 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
 
 
+admin.site.register(Post, PostAdmin)
+
+
 class CommentAdmin(admin.ModelAdmin):
     list_display = ("author", "created_on")
     search_fields = ["author", "content"]
+    actions = ["approve_comments"]
+
+    def approve_comments(self, request, queryset):
+        queryset.update(active=True)
 
 
-admin.site.register(Post, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
