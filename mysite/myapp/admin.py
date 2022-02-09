@@ -17,6 +17,7 @@ admin.site.register(Post, PostAdmin)
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ("author", "created_on")
+    list_filter = ("active",)
     search_fields = ["author", "content"]
     actions = ["approve_comments"]
 
