@@ -34,6 +34,9 @@
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8 mt-3 left">
+            <div class="mb-4">
+                <a href="{% url 'post_create' %}" class="btn btn-primary">+ New Post</a>
+            </div>
             {% for post in post_list %}
             <div class="card mb-4">
                 <div class="card-body">

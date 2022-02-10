@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 ">
+      <div class="card-body">
+        {% if new_post %}
+        <div class="alert alert-success" role="alert">
+          Your Post is awaiting moderation
+        </div>
+        {% else %}
+        <h3>Create a Post</h3>
+        <form method="post" style="margin-top: 1.3em;">
+          {{ post_form | crispy }}
+          {% csrf_token %}
+          <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
