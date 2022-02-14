@@ -1,28 +1,29 @@
 # ebac-django
 # Django
+ 
+## Virtual Env (W,Windows),(L,Linux),(M,Mac)
 
-## Virtual Env (Windows)
+#### Create virtual environment (W,L)
+* virtualenv: `virtualenv <envName>`
+* python3 venv: `python3 -m venv <envName>`
 
-#### Create virtual environment
-* `virtualemv <envName>`
-
-#### Windows Security Authorization
+#### Windows Security Authorization (W)
 * `Set-ExecutionPolicy Unrestricted -Scope Process`
 
-#### Start virtual environment
-* `.\\<patchEnv>\<envName>\Scripts\activate`
+#### Start virtual environment 
+* (W): `.\\<patchEnv>\<envName>\Scripts\activate`
+* (L): `source <patchEnv>/<envName>/bin/activate`
 
-#### Stop virtual environment
+#### Stop virtual environment (W,L)
 * `deactivate`
 
-## Djando Setup
+## Djando Setup 
 
 #### Create Project
 * `django-admin startproject <projectName>`
 
 #### Create App
-* go to you project folder `cd <patchProject>\<projectName>`
-* * `python manage.py startapp <appName>`
+* `python manage.py startapp <appName>`
 
 #### Install App
 * open Settings.py and add you `<appName>` to list `INSTALLED_APPS`
