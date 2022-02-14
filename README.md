@@ -1,6 +1,3 @@
-# ebac-django
-# Django
- 
 ## Virtual Env (W,Windows),(L,Linux),(M,Mac)
 
 #### Create virtual environment (W,L)
@@ -17,7 +14,7 @@
 #### Stop virtual environment (W,L)
 * `deactivate`
 
-## Djando Setup 
+## Djando
 
 #### Create Project
 * `django-admin startproject <projectName>`
